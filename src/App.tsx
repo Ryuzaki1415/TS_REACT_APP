@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import { Input } from './Input';
+import { Button } from './components/Button';
+import { Greet } from './components/Greet';
+import { PersonList } from './components/PersonList';
+import { Status } from './components/Status';
+import { Heading } from './components/heading';
+import { Oscar } from './components/oscar';
+import { Person } from './components/person';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const Namelist=[
+    {
+      first:"WAYNE",
+      last:"ROONEY"
+    },
+    {
+    first:'BRUNO',
+    last:'FERNANDEZ'
+    }
+  ]
+
+  const PersonName={
+    firstname:'BRUCE',
+    lastname:"WAYNE"
+  }
+  return <div className='App'>
+    <Greet name='Monu' msg={10} isloggedin={true} /> 
+    <Person name={PersonName} />
+    <PersonList names={Namelist}/>
+    <Status status='error'/>
+    <Oscar>
+      <Heading>
+        The oscar goes to dicaprio!
+      </Heading>
+    </Oscar>
+    <Greet name='DJ' isloggedin={true}/>
+
+    <Button handelClick={(event,id)=>{
+      console.log('Button has been clicked',event,id)
+    }}></Button>
+
+    <Input value=''handleChange={event=>console.log(event)}/>
+
+  </div>
+  
 }
 
 export default App;
