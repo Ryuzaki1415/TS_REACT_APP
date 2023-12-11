@@ -3,8 +3,8 @@ type Greetprops={
     msg?:number
     isloggedin:boolean
 }
-export const Greet =(props:Greetprops):JSX.Element=>{
-    const {msg=0}=props
+export const Greet =({name,msg=0,isloggedin}:Greetprops):JSX.Element=>{
+   
 
 
 
@@ -12,7 +12,7 @@ return (
         <div>
             <h2>
                 {
-                    props.isloggedin?`Welcome ${props.name} you have ${msg} msgs!`:`welcome guest`   
+                    isloggedin?`Welcome ${name} you have ${msg} msgs!`:`welcome guest`   
                 }
             </h2>
         </div>
