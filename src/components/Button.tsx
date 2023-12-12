@@ -1,5 +1,6 @@
 type ButtonProps={
     handelClick:(event: React.MouseEvent<HTMLButtonElement>,id:number)=>void
+     
 }
 
 

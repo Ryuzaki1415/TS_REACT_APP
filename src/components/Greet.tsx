@@ -6,8 +6,6 @@ type Greetprops={
 export const Greet =({name,msg=0,isloggedin}:Greetprops):JSX.Element=>{
    
 
-
-
 return (
         <div>
             <h2>

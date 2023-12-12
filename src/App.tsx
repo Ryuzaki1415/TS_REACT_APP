@@ -4,6 +4,8 @@ import { Input } from './Input';
 import { Button } from './components/Button';
 import { Greet } from './components/Greet';
 import { PersonList } from './components/PersonList';
+import { LoggedIn } from './components/State/LoggedIn';
+import { User } from './components/State/User';
 import { Status } from './components/Status';
 import { Heading } from './components/heading';
 import { Oscar } from './components/oscar';
@@ -30,7 +32,7 @@ function App() {
     <Greet name='Monu' msg={10} isloggedin={true} /> 
     <Person name={PersonName} />
     <PersonList names={Namelist}/>
-    <Status status='error'/>
+    <Status status='success'/>
     <Oscar>
       <Heading>
         The oscar goes to dicaprio!
@@ -43,6 +45,8 @@ function App() {
     }}></Button>
 
     <Input value=''handleChange={event=>console.log(event)}/>
+    <LoggedIn/>
+    <User/>
 
   </div>
   
